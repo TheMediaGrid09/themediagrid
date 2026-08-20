@@ -1,0 +1,3356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="images/tmglogo.png">
+<link rel="apple-touch-icon" href="images/tmglogo.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Website Portfolio | The Media Grid</title>
+
+<meta name="description"
+content="Explore website projects created by The Media Grid for businesses including The Iron Tribe, Samruddhi T-Shirts, Pedal Pro Cycling and BikenMe.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+
+/* =========================================================
+   ROOT
+========================================================= */
+
+:root{
+    --blue:#2563eb;
+    --blue-dark:#1d4ed8;
+    --blue-light:#eff6ff;
+
+    --navy:#0f172a;
+    --text:#1e293b;
+    --muted:#64748b;
+
+    --white:#ffffff;
+    --border:#e2e8f0;
+    --soft:#f8fafc;
+
+    --shadow:
+        0 20px 60px rgba(15,23,42,.08);
+
+    --radius:22px;
+}
+
+/* =========================================================
+   RESET
+========================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"DM Sans",sans-serif;
+    color:var(--text);
+    background:#fff;
+    line-height:1.6;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+.container{
+    width:min(1180px, calc(100% - 40px));
+    margin:auto;
+}
+
+section{
+    padding:100px 0;
+}
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar{
+    position:sticky;
+    top:0;
+    z-index:999;
+
+    background:rgba(255,255,255,.92);
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+
+    border-bottom:1px solid rgba(15,23,42,.07);
+}
+
+.nav-inner{
+    height:76px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    font-family:"Manrope",sans-serif;
+    font-size:18px;
+    font-weight:800;
+    color:#0f172a;
+}
+
+.logo img{
+    width:40px;
+    height:40px;
+    object-fit:contain;
+}
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:32px;
+
+    font-size:14px;
+    font-weight:600;
+    color:#475569;
+}
+
+.nav-links a{
+    transition:.25s ease;
+}
+
+.nav-links a:hover{
+    color:var(--blue);
+}
+
+.nav-cta{
+    padding:11px 18px;
+
+    background:var(--blue);
+    color:#fff!important;
+
+    border-radius:10px;
+
+    box-shadow:
+        0 8px 20px rgba(37,99,235,.20);
+}
+
+.menu-btn{
+    display:none;
+
+    width:42px;
+    height:42px;
+
+    border:1px solid var(--border);
+    background:#fff;
+
+    border-radius:10px;
+
+    align-items:center;
+    justify-content:center;
+
+    cursor:pointer;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+    position:relative;
+    overflow:hidden;
+
+    padding:120px 0 110px;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(37,99,235,.09),
+            transparent 45%
+        );
+}
+
+.hero-content{
+    max-width:850px;
+    margin:auto;
+    text-align:center;
+}
+
+.eyebrow{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+
+    padding:7px 13px;
+
+    border:1px solid rgba(37,99,235,.15);
+    background:rgba(239,246,255,.8);
+
+    color:var(--blue);
+
+    border-radius:100px;
+
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+}
+
+.eyebrow .dot{
+    width:7px;
+    height:7px;
+
+    border-radius:50%;
+    background:var(--blue);
+}
+
+.hero h1{
+    margin-top:24px;
+
+    font-family:"Manrope",sans-serif;
+
+    font-size:clamp(42px,6vw,72px);
+    line-height:1.02;
+    letter-spacing:-.045em;
+
+    color:var(--navy);
+}
+
+.hero h1 span{
+    color:var(--blue);
+}
+
+.hero p{
+    max-width:690px;
+    margin:25px auto 0;
+
+    color:var(--muted);
+    font-size:17px;
+}
+
+.hero-buttons{
+    margin-top:34px;
+
+    display:flex;
+    justify-content:center;
+    gap:12px;
+}
+
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:9px;
+
+    padding:13px 20px;
+
+    border-radius:11px;
+
+    font-size:14px;
+    font-weight:700;
+
+    transition:.25s ease;
+}
+
+.btn-primary{
+    background:var(--blue);
+    color:#fff;
+
+    box-shadow:
+        0 10px 25px rgba(37,99,235,.20);
+}
+
+.btn-primary:hover{
+    background:var(--blue-dark);
+    transform:translateY(-2px);
+}
+
+.btn-secondary{
+    background:#fff;
+    color:var(--navy);
+
+    border:1px solid var(--border);
+}
+
+.btn-secondary:hover{
+    border-color:#bfdbfe;
+    color:var(--blue);
+}
+
+/* =========================================================
+   SECTION HEADER
+========================================================= */
+
+.section-header{
+    max-width:720px;
+    margin:0 auto 55px;
+    text-align:center;
+}
+
+.section-label{
+    color:var(--blue);
+
+    font-size:11px;
+    font-weight:800;
+
+    letter-spacing:.13em;
+    text-transform:uppercase;
+}
+
+.section-header h2{
+    margin-top:12px;
+
+    font-family:"Manrope",sans-serif;
+
+    font-size:clamp(32px,4vw,48px);
+    line-height:1.1;
+    letter-spacing:-.035em;
+
+    color:var(--navy);
+}
+
+.section-header p{
+    margin-top:16px;
+
+    color:var(--muted);
+    font-size:16px;
+}
+
+/* =========================================================
+   PORTFOLIO
+========================================================= */
+
+.portfolio{
+    background:#f8fafc;
+}
+
+.portfolio-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+}
+
+.project-card{
+    background:#fff;
+
+    border:1px solid var(--border);
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    box-shadow:0 10px 35px rgba(15,23,42,.05);
+
+    transition:.35s ease;
+}
+
+.project-card:hover{
+    transform:translateY(-7px);
+
+    box-shadow:
+        0 25px 60px rgba(15,23,42,.10);
+}
+
+.project-image{
+    position:relative;
+
+    height:330px;
+
+    overflow:hidden;
+
+    background:#e2e8f0;
+}
+
+.project-image img{
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.5s ease;
+}
+
+.project-card:hover .project-image img{
+    transform:scale(1.04);
+}
+
+.project-overlay{
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+    align-items:flex-end;
+    justify-content:flex-end;
+
+    padding:20px;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(15,23,42,.50),
+            transparent 45%
+        );
+}
+
+.view-project{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+
+    padding:10px 15px;
+
+    background:#fff;
+
+    color:var(--navy);
+
+    border-radius:9px;
+
+    font-size:12px;
+    font-weight:800;
+
+    transition:.25s ease;
+}
+
+.view-project:hover{
+    background:var(--blue);
+    color:#fff;
+}
+
+.project-content{
+    padding:25px;
+}
+
+.project-meta{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    gap:15px;
+
+    margin-bottom:12px;
+}
+
+.project-industry{
+    color:var(--blue);
+
+    font-size:10px;
+    font-weight:800;
+
+    letter-spacing:.1em;
+    text-transform:uppercase;
+}
+
+.project-status{
+    display:flex;
+    align-items:center;
+    gap:6px;
+
+    color:#16a34a;
+
+    font-size:10px;
+    font-weight:800;
+
+    text-transform:uppercase;
+}
+
+.project-status span{
+    width:6px;
+    height:6px;
+
+    border-radius:50%;
+
+    background:#16a34a;
+}
+
+.project-content h3{
+    font-family:"Manrope",sans-serif;
+
+    font-size:25px;
+
+    color:var(--navy);
+}
+
+.project-content p{
+    margin-top:9px;
+
+    color:var(--muted);
+
+    font-size:14px;
+}
+
+.tags{
+    display:flex;
+    flex-wrap:wrap;
+
+    gap:7px;
+
+    margin-top:17px;
+}
+
+.tag{
+    padding:6px 9px;
+
+    border-radius:7px;
+
+    background:#f1f5f9;
+
+    color:#475569;
+
+    font-size:10px;
+    font-weight:700;
+}
+
+/* =========================================================
+   WHY US
+========================================================= */
+
+.why-us-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.info-card{
+    padding:30px;
+
+    border:1px solid var(--border);
+
+    border-radius:20px;
+
+    background:#fff;
+
+    transition:.3s ease;
+}
+
+.info-card:hover{
+    transform:translateY(-5px);
+
+    border-color:#bfdbfe;
+
+    box-shadow:var(--shadow);
+}
+
+.info-icon{
+    width:46px;
+    height:46px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:13px;
+
+    background:var(--blue-light);
+    color:var(--blue);
+
+    font-size:17px;
+}
+
+.info-card h3{
+    margin-top:20px;
+
+    font-family:"Manrope",sans-serif;
+
+    font-size:19px;
+
+    color:var(--navy);
+}
+
+.info-card p{
+    margin-top:8px;
+
+    color:var(--muted);
+
+    font-size:14px;
+}
+
+/* =========================================================
+   WHY IT MATTERS
+========================================================= */
+
+.matter{
+    background:#f8fafc;
+}
+
+.matter-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+
+    gap:60px;
+
+    align-items:center;
+}
+
+.matter-content h2{
+    margin-top:12px;
+
+    font-family:"Manrope",sans-serif;
+
+    font-size:clamp(32px,4vw,48px);
+    line-height:1.1;
+
+    color:var(--navy);
+}
+
+.matter-content p{
+    margin-top:18px;
+
+    color:var(--muted);
+}
+
+.matter-list{
+    margin-top:28px;
+
+    display:grid;
+    gap:13px;
+}
+
+.matter-list div{
+    display:flex;
+    align-items:flex-start;
+    gap:12px;
+
+    font-size:14px;
+}
+
+.matter-list i{
+    margin-top:4px;
+
+    color:var(--blue);
+}
+
+.matter-box{
+    min-height:380px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:40px;
+
+    border-radius:28px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(37,99,235,.12),
+            transparent 65%
+        );
+
+    border:1px solid #dbeafe;
+}
+
+.matter-stat{
+    text-align:center;
+}
+
+.matter-stat strong{
+    display:block;
+
+    font-family:"Manrope",sans-serif;
+
+    font-size:64px;
+
+    color:var(--blue);
+}
+
+.matter-stat span{
+    color:var(--muted);
+
+    font-size:14px;
+}
+
+/* =========================================================
+   COMMON PROBLEMS
+========================================================= */
+
+.problems-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+
+    gap:15px;
+}
+
+.problem{
+    display:flex;
+    align-items:flex-start;
+    gap:15px;
+
+    padding:22px;
+
+    border:1px solid var(--border);
+
+    border-radius:15px;
+
+    background:#fff;
+}
+
+.problem i{
+    color:#ef4444;
+
+    margin-top:4px;
+}
+
+.problem h3{
+    font-size:15px;
+
+    color:var(--navy);
+}
+
+.problem p{
+    margin-top:4px;
+
+    font-size:13px;
+    color:var(--muted);
+}
+
+/* =========================================================
+   SOLUTION
+========================================================= */
+
+.solution{
+    background:#f8fafc;
+}
+
+.solution-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+
+    gap:20px;
+}
+
+.solution-card{
+    padding:28px;
+
+    background:#fff;
+
+    border:1px solid var(--border);
+
+    border-radius:20px;
+}
+
+.solution-number{
+    font-size:11px;
+    font-weight:800;
+
+    color:var(--blue);
+}
+
+.solution-card h3{
+    margin-top:12px;
+
+    font-family:"Manrope",sans-serif;
+
+    color:var(--navy);
+}
+
+.solution-card p{
+    margin-top:8px;
+
+    font-size:14px;
+
+    color:var(--muted);
+}
+
+/* =========================================================
+   WHAT'S INCLUDED
+========================================================= */
+
+.included-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+
+    gap:15px;
+}
+
+.included-item{
+    padding:25px 20px;
+
+    text-align:center;
+
+    border:1px solid var(--border);
+
+    border-radius:17px;
+
+    background:#fff;
+}
+
+.included-item i{
+    color:var(--blue);
+
+    font-size:22px;
+}
+
+.included-item h3{
+    margin-top:13px;
+
+    font-size:15px;
+
+    color:var(--navy);
+}
+
+.included-item p{
+    margin-top:5px;
+
+    color:var(--muted);
+
+    font-size:12px;
+}
+
+/* =========================================================
+   BEFORE AFTER
+========================================================= */
+
+.before-after{
+    background:#f8fafc;
+}
+
+.ba-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+
+    gap:20px;
+}
+
+.ba-card{
+    overflow:hidden;
+
+    border:1px solid var(--border);
+
+    border-radius:20px;
+
+    background:#fff;
+}
+
+.ba-label{
+    padding:13px 18px;
+
+    font-size:11px;
+    font-weight:800;
+
+    letter-spacing:.1em;
+
+    text-transform:uppercase;
+}
+
+.ba-before .ba-label{
+    color:#dc2626;
+}
+
+.ba-after .ba-label{
+    color:#16a34a;
+}
+
+.ba-content{
+    min-height:300px;
+
+    padding:35px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.ba-content h3{
+    font-family:"Manrope",sans-serif;
+
+    font-size:27px;
+
+    color:var(--navy);
+}
+
+.ba-content p{
+    margin-top:10px;
+
+    color:var(--muted);
+
+    font-size:14px;
+}
+
+/* =========================================================
+   WHY CHOOSE US
+========================================================= */
+
+.choose-grid{
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:20px;
+}
+
+.choose-item{
+    display:flex;
+    align-items:flex-start;
+
+    gap:17px;
+
+    padding:25px;
+
+    border:1px solid var(--border);
+
+    border-radius:18px;
+}
+
+.choose-item i{
+    width:42px;
+    height:42px;
+
+    flex-shrink:0;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:11px;
+
+    background:var(--blue-light);
+
+    color:var(--blue);
+}
+
+.choose-item h3{
+    font-size:16px;
+
+    color:var(--navy);
+}
+
+.choose-item p{
+    margin-top:5px;
+
+    color:var(--muted);
+
+    font-size:13px;
+}
+
+/* =========================================================
+   TESTIMONIALS
+========================================================= */
+
+.testimonials{
+    background:#f8fafc;
+}
+
+.testimonial-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+
+    gap:20px;
+}
+
+.testimonial{
+    padding:28px;
+
+    background:#fff;
+
+    border:1px solid var(--border);
+
+    border-radius:20px;
+}
+
+.stars{
+    color:#f59e0b;
+
+    font-size:12px;
+
+    letter-spacing:2px;
+}
+
+.testimonial p{
+    margin-top:18px;
+
+    color:#475569;
+
+    font-size:14px;
+
+    line-height:1.8;
+}
+
+.client{
+    margin-top:22px;
+
+    display:flex;
+    align-items:center;
+
+    gap:12px;
+}
+
+.client-avatar{
+    width:40px;
+    height:40px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:var(--blue-light);
+
+    color:var(--blue);
+
+    font-weight:800;
+}
+
+.client strong{
+    display:block;
+
+    color:var(--navy);
+
+    font-size:13px;
+}
+
+.client span{
+    display:block;
+
+    color:var(--muted);
+
+    font-size:11px;
+}
+
+/* =========================================================
+   FAQ
+========================================================= */
+
+.faq-wrap{
+    max-width:800px;
+
+    margin:auto;
+}
+
+.faq-item{
+    border-bottom:1px solid var(--border);
+}
+
+.faq-q{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:22px 5px;
+
+    cursor:pointer;
+}
+
+.faq-q h4{
+    font-size:15px;
+
+    color:var(--navy);
+}
+
+.faq-q i{
+    color:var(--blue);
+
+    transition:.25s ease;
+}
+
+.faq-a{
+    max-height:0;
+
+    overflow:hidden;
+
+    transition:max-height .35s ease;
+}
+
+.faq-a p{
+    padding:0 5px 22px;
+
+    color:var(--muted);
+
+    font-size:14px;
+}
+
+.faq-item.active .faq-a{
+    max-height:200px;
+}
+
+.faq-item.active .faq-q i{
+    transform:rotate(45deg);
+}
+
+/* =========================================================
+   FINAL CTA
+========================================================= */
+
+.final-cta{
+    position:relative;
+
+    overflow:hidden;
+
+    padding:70px 40px;
+
+    text-align:center;
+
+    border-radius:28px;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(96,165,250,.25),
+            transparent 50%
+        ),
+        #0f172a;
+}
+
+.final-cta .eyebrow{
+    background:rgba(255,255,255,.08);
+
+    border-color:rgba(255,255,255,.15);
+
+    color:#93c5fd;
+}
+
+.final-cta .dot{
+    background:#60a5fa;
+}
+
+.final-cta h2{
+    margin-top:20px;
+
+    font-family:"Manrope",sans-serif;
+
+    font-size:clamp(30px,4vw,48px);
+
+    line-height:1.1;
+
+    color:#fff;
+}
+
+.final-cta p{
+    max-width:600px;
+
+    margin:15px auto 0;
+
+    color:#cbd5e1;
+
+    font-size:15px;
+}
+
+.final-cta .btns{
+    margin-top:28px;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:12px;
+}
+
+.btn-ghost{
+    color:#fff;
+
+    border:1px solid rgba(255,255,255,.2);
+}
+
+.btn-ghost:hover{
+    background:rgba(255,255,255,.08);
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+    padding:75px 0 55px;
+
+    background:#fff;
+
+    border-top:1px solid #e5e7eb;
+}
+
+.footer-grid{
+    display:grid;
+
+    grid-template-columns:
+        1.5fr
+        1fr
+        1.15fr
+        1.2fr;
+
+    gap:50px;
+}
+
+.footer-brand .logo{
+    margin-bottom:20px;
+}
+
+.footer-description{
+    max-width:300px;
+
+    color:#475569;
+
+    font-size:14px;
+
+    line-height:1.75;
+}
+
+.socials{
+    display:flex;
+
+    gap:10px;
+
+    margin-top:22px;
+}
+
+.social{
+    width:37px;
+    height:37px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border:1px solid #e2e8f0;
+
+    border-radius:10px;
+
+    color:#0f172a;
+
+    font-size:13px;
+
+    transition:.25s ease;
+}
+
+.social:hover{
+    color:var(--blue);
+
+    border-color:#bfdbfe;
+
+    background:#eff6ff;
+}
+
+.footer-col h4{
+    margin-bottom:18px;
+
+    font-family:"Manrope",sans-serif;
+
+    font-size:13px;
+
+    letter-spacing:.08em;
+
+    text-transform:uppercase;
+
+    color:#0f172a;
+}
+
+.footer-links{
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+}
+
+.footer-links a{
+    color:#64748b;
+
+    font-size:14px;
+
+    transition:.2s ease;
+}
+
+.footer-links a:hover{
+    color:var(--blue);
+}
+
+.contact-links{
+    display:flex;
+
+    flex-direction:column;
+
+    gap:13px;
+}
+
+.contact-link{
+    display:flex;
+
+    align-items:center;
+
+    gap:9px;
+
+    color:#64748b;
+
+    font-size:14px;
+}
+
+.contact-link i{
+    width:17px;
+
+    color:#475569;
+}
+
+.footer-bottom{
+    margin-top:55px;
+
+    padding-top:25px;
+
+    border-top:1px solid #e5e7eb;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    color:#94a3b8;
+
+    font-size:12px;
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:900px){
+
+    .nav-links{
+        display:none;
+
+        position:absolute;
+
+        top:76px;
+        left:20px;
+        right:20px;
+
+        padding:20px;
+
+        background:#fff;
+
+        border:1px solid var(--border);
+
+        border-radius:15px;
+
+        flex-direction:column;
+
+        align-items:stretch;
+
+        gap:0;
+
+        box-shadow:var(--shadow);
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    .nav-links a{
+        padding:12px;
+    }
+
+    .menu-btn{
+        display:flex;
+    }
+
+    .portfolio-grid{
+        grid-template-columns:1fr;
+    }
+
+    .why-us-grid,
+    .solution-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .included-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .testimonial-grid{
+        grid-template-columns:1fr;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+}
+
+@media(max-width:650px){
+
+    section{
+        padding:75px 0;
+    }
+
+    .container{
+        width:min(100% - 30px,1180px);
+    }
+
+    .hero{
+        padding:90px 0 80px;
+    }
+
+    .hero h1{
+        font-size:43px;
+    }
+
+    .hero p{
+        font-size:15px;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+    }
+
+    .hero-buttons .btn{
+        width:100%;
+    }
+
+    .project-image{
+        height:250px;
+    }
+
+    .why-us-grid,
+    .solution-grid,
+    .included-grid,
+    .problems-grid,
+    .choose-grid,
+    .ba-grid,
+    .matter-grid{
+        grid-template-columns:1fr;
+    }
+
+    .matter-box{
+        min-height:280px;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+
+        gap:35px;
+    }
+
+    .footer-bottom{
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:8px;
+    }
+
+    .final-cta{
+        padding:55px 20px;
+    }
+
+    .final-cta .btns{
+        flex-direction:column;
+    }
+
+    .final-cta .btn{
+        width:100%;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<header class="navbar">
+
+<div class="container nav-inner">
+
+<a href="index.html" class="logo">
+
+<img src="Images/TMGlogo.png" alt="The Media Grid">
+
+<span>The Media Grid</span>
+
+</a>
+
+
+<nav class="nav-links" id="navLinks">
+
+<a href="index.html">Home</a>
+
+<a href="#portfolio">Portfolio</a>
+
+<a href="#why-us">Why Us</a>
+
+<a href="#faq">FAQ</a>
+
+<a href="audit.html" class="nav-cta">
+Free Audit
+</a>
+
+</nav>
+
+
+<button class="menu-btn" id="menuBtn">
+
+<i class="fa-solid fa-bars"></i>
+
+</button>
+
+</div>
+
+</header>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero">
+
+<div class="container hero-content">
+
+<div class="eyebrow">
+
+<span class="dot"></span>
+
+Website Development
+
+</div>
+
+
+<h1>
+
+Websites Built to
+
+<span>Make Your Business Look Serious.</span>
+
+</h1>
+
+
+<p>
+
+We design and develop modern, responsive websites
+that give businesses a stronger online presence,
+build trust and turn visitors into enquiries.
+
+</p>
+
+
+<div class="hero-buttons">
+
+<a href="#portfolio" class="btn btn-primary">
+
+Explore Our Work
+
+<i class="fa-solid fa-arrow-down"></i>
+
+</a>
+
+
+<a href="audit.html" class="btn btn-secondary">
+
+Get Free Website Audit
+
+<i class="fa-solid fa-arrow-right"></i>
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     OUR PORTFOLIO
+===================================================== -->
+
+<section class="portfolio" id="portfolio">
+
+<div class="container">
+
+
+<div class="section-header">
+
+<div class="section-label">
+Our Portfolio
+</div>
+
+<h2>
+Websites We've Built
+</h2>
+
+<p>
+Real businesses. Real projects. Websites designed
+around the business, not copied from templates.
+</p>
+
+</div>
+
+
+<div class="portfolio-grid">
+
+
+<!-- THE IRON TRIBE -->
+
+<article class="project-card">
+
+<div class="project-image">
+
+<img
+src="Images/theirontribe.png"
+alt="The Iron Tribe website">
+
+<div class="project-overlay">
+
+    <a 
+        href="https://theirontribe.in" 
+        class="view-project"
+        target="_blank"
+        rel="noopener noreferrer">
+
+        View Live Website
+
+        <i class="fa-solid fa-arrow-right"></i>
+
+    </a>
+
+</div>
+
+</div>
+
+
+<div class="project-content">
+
+<div class="project-meta">
+
+<span class="project-industry">
+Cycle Rental
+</span>
+
+<span class="project-status">
+
+<span></span>
+
+Completed
+
+</span>
+
+</div>
+
+
+<h3>
+The Iron Tribe
+</h3>
+
+
+<p>
+
+A modern website built to present the cycle
+rental business professionally and make
+it easier for customers to discover and enquire.
+
+</p>
+
+
+<div class="tags">
+
+<span class="tag">Website Design</span>
+
+<span class="tag">Development</span>
+
+<span class="tag">Responsive UI</span>
+
+<span class="tag">Local Business</span>
+
+</div>
+
+</div>
+
+</article>
+
+
+
+<!-- SAMRUDDHI T-SHIRTS -->
+
+<article class="project-card">
+
+<div class="project-image">
+
+<img
+src="Images/samruddhitshirtswebsite.png"
+alt="Samruddhi T-Shirts website">
+
+<div class="project-overlay">
+
+    <a 
+        href="https://samruddhitshirtsdadar.com" 
+        class="view-project"
+        target="_blank"
+        rel="noopener noreferrer">
+
+        View Live Website
+
+        <i class="fa-solid fa-arrow-right"></i>
+
+    </a>
+
+</div>
+
+</div>
+
+
+<div class="project-content">
+
+<div class="project-meta">
+
+<span class="project-industry">
+Apparel
+</span>
+
+<span class="project-status">
+
+<span></span>
+
+Completed
+
+</span>
+
+</div>
+
+
+<h3>
+Samruddhi T-Shirts
+</h3>
+
+
+<p>
+
+A clean and product-focused website designed
+to showcase the business and its apparel
+offering with a stronger digital presence.
+
+</p>
+
+
+<div class="tags">
+
+<span class="tag">Website Design</span>
+
+<span class="tag">Product Showcase</span>
+
+<span class="tag">UI/UX</span>
+
+<span class="tag">Development</span>
+
+</div>
+
+</div>
+
+</article>
+
+
+
+<!-- PEDAL PRO CYCLING -->
+
+<article class="project-card">
+
+<div class="project-image">
+
+<img
+src="Images/pedalprocycling.png"
+alt="Pedal Pro Cycling website">
+
+<div class="project-overlay">
+
+    <a 
+        href="https://pedalprocycling.com" 
+        class="view-project"
+        target="_blank"
+        rel="noopener noreferrer">
+
+        View Live Website
+
+        <i class="fa-solid fa-arrow-right"></i>
+
+    </a>
+
+</div>
+
+</div>
+
+
+<div class="project-content">
+
+<div class="project-meta">
+
+<span class="project-industry">
+Cycling
+</span>
+
+<span class="project-status">
+
+<span></span>
+
+Completed
+
+</span>
+
+</div>
+
+
+<h3>
+Pedal Pro Cycling
+</h3>
+
+
+<p>
+
+A professional website created to strengthen
+the cycling brand's online presence and give
+potential customers a clear path to enquiry.
+
+</p>
+
+
+<div class="tags">
+
+<span class="tag">Website Design</span>
+
+<span class="tag">Development</span>
+
+<span class="tag">Mobile Responsive</span>
+
+<span class="tag">Conversion</span>
+
+</div>
+
+</div>
+
+</article>
+
+
+
+<!-- BIKENME -->
+
+<article class="project-card">
+
+<div class="project-image">
+
+<img
+src="Images/bikenme.png"
+alt="BikenMe website">
+
+<div class="project-overlay">
+
+    <a 
+        href="https://bikenme.com" 
+        class="view-project"
+        target="_blank"
+        rel="noopener noreferrer">
+
+        View Live Website
+
+        <i class="fa-solid fa-arrow-right"></i>
+
+    </a>
+
+</div>
+
+</div>
+
+
+<div class="project-content">
+
+<div class="project-meta">
+
+<span class="project-industry">
+Cycling
+</span>
+
+<span class="project-status">
+
+<span></span>
+
+Completed
+
+</span>
+
+</div>
+
+
+<h3>
+BikenMe
+</h3>
+
+
+<p>
+
+A conversion-focused website designed to
+make the brand easier to understand,
+navigate and engage with online.
+
+</p>
+
+
+<div class="tags">
+
+<span class="tag">Website Design</span>
+
+<span class="tag">UI/UX</span>
+
+<span class="tag">Development</span>
+
+<span class="tag">Responsive</span>
+
+</div>
+
+</div>
+
+</article>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     WHY US
+===================================================== -->
+
+<section id="why-us">
+
+<div class="container">
+
+
+<div class="section-header">
+
+<div class="section-label">
+Why Us?
+</div>
+
+<h2>
+We Don't Build Websites Just to Fill a Screen.
+</h2>
+
+<p>
+Your website needs to support the business behind it.
+</p>
+
+</div>
+
+
+<div class="why-us-grid">
+
+
+<div class="info-card">
+
+<div class="info-icon">
+<i class="fa-solid fa-bullseye"></i>
+</div>
+
+<h3>
+Business First
+</h3>
+
+<p>
+Every page is structured around your actual
+business goals, customers and services.
+</p>
+
+</div>
+
+
+<div class="info-card">
+
+<div class="info-icon">
+<i class="fa-solid fa-mobile-screen"></i>
+</div>
+
+<h3>
+Mobile First
+</h3>
+
+<p>
+Your website needs to work properly where
+most customers are actually browsing.
+</p>
+
+</div>
+
+
+<div class="info-card">
+
+<div class="info-icon">
+<i class="fa-solid fa-chart-line"></i>
+</div>
+
+<h3>
+Built for Growth
+</h3>
+
+<p>
+The website is designed to support enquiries,
+visibility and long-term digital growth.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     WHY IT MATTERS
+===================================================== -->
+
+<section class="matter">
+
+<div class="container matter-grid">
+
+
+<div class="matter-content">
+
+<div class="section-label">
+Why It Matters
+</div>
+
+<h2>
+Your Website Is Often Your First Impression.
+</h2>
+
+<p>
+A weak website can make a good business look
+unreliable. Customers judge your business before
+they ever call, message or visit.
+</p>
+
+
+<div class="matter-list">
+
+<div>
+<i class="fa-solid fa-check"></i>
+<span>Build immediate credibility.</span>
+</div>
+
+<div>
+<i class="fa-solid fa-check"></i>
+<span>Explain your services clearly.</span>
+</div>
+
+<div>
+<i class="fa-solid fa-check"></i>
+<span>Make contacting you effortless.</span>
+</div>
+
+<div>
+<i class="fa-solid fa-check"></i>
+<span>Give Google and customers a stronger destination.</span>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="matter-box">
+
+<div class="matter-stat">
+
+<strong>24/7</strong>
+
+<span>
+Your website represents your business
+even when you're not available.
+</span>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     COMMON PROBLEMS
+===================================================== -->
+
+<section>
+
+<div class="container">
+
+
+<div class="section-header">
+
+<div class="section-label">
+Common Problems
+</div>
+
+<h2>
+What Usually Goes Wrong
+</h2>
+
+<p>
+These are the problems we see repeatedly on
+small-business websites.
+</p>
+
+</div>
+
+
+<div class="problems-grid">
+
+
+<div class="problem">
+
+<i class="fa-solid fa-xmark"></i>
+
+<div>
+
+<h3>
+Outdated design
+</h3>
+
+<p>
+The website looks like it was built years ago.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="problem">
+
+<i class="fa-solid fa-xmark"></i>
+
+<div>
+
+<h3>
+Poor mobile experience
+</h3>
+
+<p>
+The website breaks or becomes difficult to use on phones.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="problem">
+
+<i class="fa-solid fa-xmark"></i>
+
+<div>
+
+<h3>
+Unclear messaging
+</h3>
+
+<p>
+Visitors cannot quickly understand what you offer.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="problem">
+
+<i class="fa-solid fa-xmark"></i>
+
+<div>
+
+<h3>
+Weak calls to action
+</h3>
+
+<p>
+Customers don't know what they should do next.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="problem">
+
+<i class="fa-solid fa-xmark"></i>
+
+<div>
+
+<h3>
+Slow or cluttered pages
+</h3>
+
+<p>
+Too much unnecessary content hurts the experience.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="problem">
+
+<i class="fa-solid fa-xmark"></i>
+
+<div>
+
+<h3>
+No conversion structure
+</h3>
+
+<p>
+The website exists, but doesn't actively generate enquiries.
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     OUR SOLUTION
+===================================================== -->
+
+<section class="solution">
+
+<div class="container">
+
+
+<div class="section-header">
+
+<div class="section-label">
+Our Solution
+</div>
+
+<h2>
+A Website Built Around Your Business.
+</h2>
+
+<p>
+We combine design, structure, content and development
+to create a website that actually has a job to do.
+</p>
+
+</div>
+
+
+<div class="solution-grid">
+
+
+<div class="solution-card">
+
+<div class="solution-number">
+01 / STRATEGY
+</div>
+
+<h3>
+Understand the Business
+</h3>
+
+<p>
+We identify your audience, services, positioning
+and the action you want visitors to take.
+</p>
+
+</div>
+
+
+<div class="solution-card">
+
+<div class="solution-number">
+02 / DESIGN
+</div>
+
+<h3>
+Build the Experience
+</h3>
+
+<p>
+We create a clean visual system and page structure
+that makes the business easier to understand.
+</p>
+
+</div>
+
+
+<div class="solution-card">
+
+<div class="solution-number">
+03 / DEVELOPMENT
+</div>
+
+<h3>
+Launch Properly
+</h3>
+
+<p>
+Responsive development ensures the website works
+across desktop, tablet and mobile devices.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     WHAT'S INCLUDED
+===================================================== -->
+
+<section>
+
+<div class="container">
+
+
+<div class="section-header">
+
+<div class="section-label">
+What's Included
+</div>
+
+<h2>
+Everything Your Website Needs
+</h2>
+
+</div>
+
+
+<div class="included-grid">
+
+
+<div class="included-item">
+
+<i class="fa-solid fa-pen-ruler"></i>
+
+<h3>
+UI / UX Design
+</h3>
+
+<p>
+Clean and modern interface.
+</p>
+
+</div>
+
+
+<div class="included-item">
+
+<i class="fa-solid fa-code"></i>
+
+<h3>
+Development
+</h3>
+
+<p>
+Responsive front-end development.
+</p>
+
+</div>
+
+
+<div class="included-item">
+
+<i class="fa-solid fa-mobile-screen-button"></i>
+
+<h3>
+Responsive Design
+</h3>
+
+<p>
+Optimized for mobile devices.
+</p>
+
+</div>
+
+
+<div class="included-item">
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+<h3>
+SEO Foundation
+</h3>
+
+<p>
+Proper technical structure.
+</p>
+
+</div>
+
+
+<div class="included-item">
+
+<i class="fa-solid fa-bolt"></i>
+
+<h3>
+Performance
+</h3>
+
+<p>
+Fast and lightweight experience.
+</p>
+
+</div>
+
+
+<div class="included-item">
+
+<i class="fa-solid fa-phone"></i>
+
+<h3>
+Lead Actions
+</h3>
+
+<p>
+Calls and enquiry pathways.
+</p>
+
+</div>
+
+
+<div class="included-item">
+
+<i class="fa-brands fa-whatsapp"></i>
+
+<h3>
+WhatsApp Integration
+</h3>
+
+<p>
+Easy customer communication.
+</p>
+
+</div>
+
+
+<div class="included-item">
+
+<i class="fa-solid fa-gear"></i>
+
+<h3>
+Launch Support
+</h3>
+
+<p>
+Help getting the website live.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     BEFORE & AFTER
+===================================================== -->
+
+<section class="before-after">
+
+<div class="container">
+
+
+<div class="section-header">
+
+<div class="section-label">
+Before & After
+</div>
+
+<h2>
+The Difference a Proper Website Makes
+</h2>
+
+<p>
+The objective isn't simply making the website prettier.
+It's making the business easier to understand and trust.
+</p>
+
+</div>
+
+
+<div class="ba-grid">
+
+
+<div class="ba-card ba-before">
+
+<div class="ba-label">
+Before
+</div>
+
+<div class="ba-content">
+
+<h3>
+Confusing & Outdated
+</h3>
+
+<p>
+Weak hierarchy, outdated visuals, unclear messaging
+and no obvious customer journey.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="ba-card ba-after">
+
+<div class="ba-label">
+After
+</div>
+
+<div class="ba-content">
+
+<h3>
+Clear & Conversion Focused
+</h3>
+
+<p>
+Professional design, clear messaging, mobile-friendly
+layout and direct paths to enquiry.
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     WHY CHOOSE US
+===================================================== -->
+
+<section>
+
+<div class="container">
+
+
+<div class="section-header">
+
+<div class="section-label">
+Why Choose Us
+</div>
+
+<h2>
+We Think Beyond the Website.
+</h2>
+
+</div>
+
+
+<div class="choose-grid">
+
+
+<div class="choose-item">
+
+<i class="fa-solid fa-business-time"></i>
+
+<div>
+
+<h3>
+We Understand Small Businesses
+</h3>
+
+<p>
+Our websites are built around practical business
+requirements, not unnecessary complexity.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="choose-item">
+
+<i class="fa-solid fa-layer-group"></i>
+
+<div>
+
+<h3>
+Design + Marketing Thinking
+</h3>
+
+<p>
+The website works alongside your Google presence
+and social media instead of existing in isolation.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="choose-item">
+
+<i class="fa-solid fa-code"></i>
+
+<div>
+
+<h3>
+Clean Development
+</h3>
+
+<p>
+We focus on responsive, structured and maintainable
+website builds.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="choose-item">
+
+<i class="fa-solid fa-comments"></i>
+
+<div>
+
+<h3>
+Direct Communication
+</h3>
+
+<p>
+You deal directly with the person handling your project.
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     TESTIMONIALS
+===================================================== -->
+
+<section class="testimonials">
+
+<div class="container">
+
+
+<div class="section-header">
+
+<div class="section-label">
+Testimonials
+</div>
+
+<h2>
+What Our Clients Say
+</h2>
+
+<p>
+Feedback from businesses we've worked with.
+</p>
+
+</div>
+
+
+<div class="testimonial-grid">
+
+
+<div class="testimonial">
+
+<div class="stars">
+★★★★★
+</div>
+
+<p>
+"The website gave our business a much more
+professional online presence and made it easier
+for customers to understand what we offer."
+</p>
+
+<div class="client">
+
+<div class="client-avatar">
+IT
+</div>
+
+<div>
+
+<strong>
+The Iron Tribe
+</strong>
+
+<span>
+Website Client
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="testimonial">
+
+<div class="stars">
+★★★★★
+</div>
+
+<p>
+"The new website presentation is much cleaner
+and gives customers a better way to understand
+our products and business."
+</p>
+
+<div class="client">
+
+<div class="client-avatar">
+ST
+</div>
+
+<div>
+
+<strong>
+Samruddhi T-Shirts
+</strong>
+
+<span>
+Website Client
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="testimonial">
+
+<div class="stars">
+★★★★★
+</div>
+
+<p>
+"The website creates a much stronger digital
+presence for the brand and gives customers
+a clear way to get in touch."
+</p>
+
+<div class="client">
+
+<div class="client-avatar">
+PP
+</div>
+
+<div>
+
+<strong>
+Pedal Pro Cycling
+</strong>
+
+<span>
+Website Client
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FAQ
+===================================================== -->
+
+<section id="faq">
+
+<div class="container">
+
+
+<div class="section-header">
+
+<div class="section-label">
+FAQ
+</div>
+
+<h2>
+Frequently Asked Questions
+</h2>
+
+<p>
+A few common questions about our website projects.
+</p>
+
+</div>
+
+
+<div class="faq-wrap">
+
+
+<div class="faq-item">
+
+<div class="faq-q">
+
+<h4>
+How long does a website take to build?
+</h4>
+
+<i class="fa-solid fa-plus"></i>
+
+</div>
+
+<div class="faq-a">
+
+<p>
+The timeline depends on the number of pages,
+content and functionality required. A straightforward
+business website can usually be completed much
+faster than a complex custom platform.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="faq-item">
+
+<div class="faq-q">
+
+<h4>
+Will the website work on mobile?
+</h4>
+
+<i class="fa-solid fa-plus"></i>
+
+</div>
+
+<div class="faq-a">
+
+<p>
+Yes. Responsive design is part of the build so the
+website adapts to phones, tablets and desktop screens.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="faq-item">
+
+<div class="faq-q">
+
+<h4>
+Can you redesign my existing website?
+</h4>
+
+<i class="fa-solid fa-plus"></i>
+
+</div>
+
+<div class="faq-a">
+
+<p>
+Yes. We can audit the existing website, identify the
+major problems and rebuild the experience around
+your current business requirements.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="faq-item">
+
+<div class="faq-q">
+
+<h4>
+Can you connect WhatsApp to the website?
+</h4>
+
+<i class="fa-solid fa-plus"></i>
+
+</div>
+
+<div class="faq-a">
+
+<p>
+Yes. WhatsApp, calls and other enquiry pathways can
+be integrated into the website.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="faq-item">
+
+<div class="faq-q">
+
+<h4>
+Will the website be SEO friendly?
+</h4>
+
+<i class="fa-solid fa-plus"></i>
+
+</div>
+
+<div class="faq-a">
+
+<p>
+We build a proper technical foundation including
+responsive structure, metadata and clean page architecture.
+Ongoing SEO is a separate growth activity.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="faq-item">
+
+<div class="faq-q">
+
+<h4>
+Can you help after the website goes live?
+</h4>
+
+<i class="fa-solid fa-plus"></i>
+
+</div>
+
+<div class="faq-a">
+
+<p>
+Yes. Maintenance and ongoing improvements can be
+discussed depending on your requirements.
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FINAL CTA
+===================================================== -->
+
+<section id="contact">
+
+<div class="container">
+
+
+<div class="final-cta">
+
+
+<div class="eyebrow">
+
+<span class="dot"></span>
+
+Free, no-obligation audit
+
+</div>
+
+
+<h2>
+Is Your Website Costing You Customers?
+</h2>
+
+
+<p>
+We'll review your current website and identify
+the biggest issues affecting trust, usability and
+customer enquiries.
+</p>
+
+
+<div class="btns">
+
+
+<a href="audit.html" class="btn btn-primary">
+
+Book Free Website Audit
+
+<i class="fa-solid fa-arrow-right"></i>
+
+</a>
+
+
+<a
+href="https://wa.me/918433971377"
+class="btn btn-ghost">
+
+<i class="fa-brands fa-whatsapp"></i>
+
+Chat on WhatsApp
+
+</a>
+
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+<div class="container">
+
+<div class="footer-grid">
+
+
+<!-- BRAND -->
+
+<div class="footer-brand">
+
+<a href="index.html" class="logo">
+
+<img src="Images/TMGlogo.png" alt="The Media Grid">
+
+<span>The Media Grid</span>
+
+</a>
+
+
+<p class="footer-description">
+
+Helping local businesses get more customers
+through Google, websites, and social media.
+
+</p>
+
+
+<div class="socials">
+
+
+<a href="https://www.instagram.com/themediagrid/" class="social" aria-label="Instagram">
+
+<i class="fa-brands fa-instagram"></i>
+
+</a>
+
+
+<a href="https://www.facebook.com/profile.php?id=61573357538614" class="social" aria-label="Facebook">
+
+<i class="fa-brands fa-facebook-f"></i>
+
+</a>
+
+
+<a href="https://www.linkedin.com/company/the-media-grid/" class="social" aria-label="LinkedIn">
+
+<i class="fa-brands fa-linkedin-in"></i>
+
+</a>
+
+
+<a
+href="https://wa.me/918433971377"
+class="social"
+aria-label="WhatsApp">
+
+<i class="fa-brands fa-whatsapp"></i>
+
+</a>
+
+
+</div>
+
+</div>
+
+
+
+<!-- COMPANY -->
+
+<div class="footer-col">
+
+<h4>
+Company
+</h4>
+
+
+<div class="footer-links">
+
+<a href="index.html#about">
+About
+</a>
+
+<a href="index.html#services">
+Services
+</a>
+
+<a href="website.html">
+Portfolio
+</a>
+
+<a href="index.html#case-studies">
+Case Studies
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- SERVICES -->
+
+<div class="footer-col">
+
+<h4>
+Services
+</h4>
+
+
+<div class="footer-links">
+
+<a href="gbp.html">
+Google Business Profile
+</a>
+
+<a href="website.html">
+Website Development
+</a>
+
+<a href="instagram.html">
+Instagram Management
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- CONTACT -->
+
+<div class="footer-col">
+
+<h4>
+Contact
+</h4>
+
+
+<div class="contact-links">
+
+
+<a
+href="mailto:hello@themediagrid.in"
+class="contact-link">
+
+<i class="fa-solid fa-envelope"></i>
+
+<span>
+hello@themediagrid.in
+</span>
+
+</a>
+
+
+<a
+href="tel:+918433971377"
+class="contact-link">
+
+<i class="fa-solid fa-phone"></i>
+
+<span>
++91 84339 71377
+</span>
+
+</a>
+
+
+<a
+href="https://wa.me/918433971377"
+class="contact-link">
+
+<i class="fa-brands fa-whatsapp"></i>
+
+<span>
+Chat on WhatsApp
+</span>
+
+</a>
+
+
+</div>
+
+</div>
+
+
+</div>
+
+
+
+<div class="footer-bottom">
+
+<span>
+© 2026 The Media Grid. All rights reserved.
+</span>
+
+<span>
+Digital Growth Partner
+</span>
+
+</div>
+
+
+</div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+/* MOBILE NAV */
+
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
+
+menuBtn.addEventListener("click", () => {
+
+    navLinks.classList.toggle("active");
+
+});
+
+
+/* CLOSE MOBILE NAV AFTER CLICK */
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        navLinks.classList.remove("active");
+
+    });
+
+});
+
+
+/* FAQ */
+
+document.querySelectorAll(".faq-q").forEach(question => {
+
+    question.addEventListener("click", () => {
+
+        const item = question.parentElement;
+
+        document.querySelectorAll(".faq-item").forEach(other => {
+
+            if(other !== item){
+
+                other.classList.remove("active");
+
+            }
+
+        });
+
+        item.classList.toggle("active");
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>
